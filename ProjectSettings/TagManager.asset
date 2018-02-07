@@ -9,6 +9,7 @@ TagManager:
   - ObjDestructionSound
   - ShotSound
   - PlayerBolt
+  - Environment
   layers:
   - Default
   - TransparentFX

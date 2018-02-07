@@ -2,8 +2,8 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 20f;
-    public float fireRate = 10f;
+    public float speed;
+    public float fireRate;
     public GameObject bolt;
 
     private Vector3 movement;
@@ -44,11 +44,9 @@ public class PlayerController : MonoBehaviour
     void Move(float h, float v)
     {
         Vector3 inputMovement = new Vector3(h, 0f, v);
-        Quaternion quat = new Quaternion(inputMovement.x, inputMovement.y, inputMovement.z, 0);
 
-        quat = Camera.main.transform.rotation * quat * Quaternion.Inverse(Camera.main.transform.rotation);
-        movement.x = quat.x;
-        movement.z = quat.z;
+        movement = TAUnityLib.RotateVector3(inputMovement, Camera.main.transform.rotation);
+        movement.y = 0f;
         movement.Normalize();
 
         playerRb.position += movement * speed * Time.fixedDeltaTime;

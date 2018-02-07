@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1004efb2c10a4e14e86718cffa5248a3, type: 3}
+  m_Name: BlackCubesSpawnPoints
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 1486768335932740, guid: 569a58fe6bae8444eb4a2c926079568c,
+    type: 2}
+  spawnPoints:
+  - x: 0
+    z: 0
+  - x: -1
+    z: 1
+  - x: 0
+    z: 1
+  - x: 1
+    z: 1
+  - x: -1
+    z: 3
+  - x: 0
+    z: 3
+  - x: 1
+    z: 3

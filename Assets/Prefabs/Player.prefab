@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 114006781511487814}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3273df8f622f1e54e844d93ab879f043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 18
   fireRate: 12
   bolt: {fileID: 1333758324466802, guid: 60e02d3acedaba24baa3ebf8717c2fe2, type: 2}
 --- !u!136 &136890296571599628

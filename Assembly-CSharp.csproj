@@ -51,11 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BoltMover.cs" />
+     <Compile Include="Assets\Libraries\TAUnityLib.cs" />
+     <Compile Include="Assets\Scripts\Bolts\BoltMover.cs" />
+     <Compile Include="Assets\Scripts\Bolts\PlayerBoltCollision.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\LevelEditorCreator.cs" />
-     <Compile Include="Assets\Scripts\ObjectsDestructionDataClass.cs" />
+     <Compile Include="Assets\Scripts\Cubes\BlackCubeCollision.cs" />
+     <Compile Include="Assets\Scripts\Game Data\Damage.cs" />
+     <Compile Include="Assets\Scripts\Game Data\HP.cs" />
+     <Compile Include="Assets\Scripts\Game Data\SpawnPoints.cs" />
+     <Compile Include="Assets\Scripts\LevelEditor.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Useful Resources\ObjectsDestructionDataClass.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

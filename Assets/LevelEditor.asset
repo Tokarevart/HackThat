@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff2aa0227b3be94b85b0415657d86f5, type: 3}
   m_Name: LevelEditor
   m_EditorClassIdentifier: 
-  Object: {fileID: 1486768335932740, guid: 569a58fe6bae8444eb4a2c926079568c, type: 2}
+  spawnPointsLists:
+  - {fileID: 11400000, guid: a0b5654c96950fc449ffd3bc1f00ecb1, type: 2}
+  - {fileID: 11400000, guid: 8a68cb6a7c80e14428074f15315585bf, type: 2}
+  standartObject: {fileID: 1486768335932740, guid: 569a58fe6bae8444eb4a2c926079568c,
+    type: 2}
   spawnPoint:
-    x: -1
-    z: 3
+    x: 0
+    z: -3

@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4045355816042636}
   - component: {fileID: 65494025384484332}
   - component: {fileID: 54681104280659582}
-  - component: {fileID: 114230890466139750}
+  - component: {fileID: 114578051123650144}
+  - component: {fileID: 114667245798300174}
   m_Layer: 0
   m_Name: PlayerBolt
   m_TagString: PlayerBolt
@@ -199,7 +200,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3, z: 1.4}
   m_Center: {x: 0, y: 0.4, z: 1.5}
---- !u!114 &114230890466139750
+--- !u!114 &114578051123650144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -211,7 +212,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  flyDistance: 30
+  flyDistance: 35
+--- !u!114 &114667245798300174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333758324466802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f42345a909f4c84785a32dd77a3c4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198181492058954764
 ParticleSystem:
   m_ObjectHideFlags: 1

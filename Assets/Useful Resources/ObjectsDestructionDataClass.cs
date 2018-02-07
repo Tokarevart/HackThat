@@ -11,7 +11,7 @@ public class ObjectDestructionData
     public AudioSource soundEffect;
 }
 
-[CreateAssetMenu(fileName = "ObjectsDestructionData", menuName = "Create Objects Destruction Data", order = 1)]
+//[CreateAssetMenu(fileName = "ObjectsDestructionData", menuName = "Create Objects Destruction Data", order = 1)]
 public class ObjectsDestructionDataClass : ScriptableObject
 {
     public List<ObjectDestructionData> ObjectsDestructionDataList = new List<ObjectDestructionData>();
