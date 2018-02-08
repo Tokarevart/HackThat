@@ -25,10 +25,8 @@ public class LevelEditor : ScriptableObject
 
         Transform[] children = instanedObj.GetComponentsInChildren<Transform>();
         foreach (var child in children)
-            if (child != instanedObj.transform) 
+            if (child && child != instanedObj.transform) 
                 DestroyImmediate(child.gameObject);
-        //for (int i = 1; i < children.Length; i++)
-            //DestroyImmediate(children[i].gameObject);
     }
 
     public void BuildObject(GameObject obj, VectorXZ inputPoint)
