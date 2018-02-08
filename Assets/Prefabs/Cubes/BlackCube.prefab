@@ -193,4 +193,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: {fileID: 11400000, guid: 9a6f37790143a004780ac459cb8ff141, type: 2}
   playerBoltDamage: {fileID: 11400000, guid: 2fdb9b61b284eef4ebf569a85f98758b, type: 2}
-  takeDamageAnimDuration: 0.15
+  takeDamageAnimDuration: 0.1
