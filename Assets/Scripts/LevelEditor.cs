@@ -11,10 +11,25 @@ public class VectorXZ
 [CreateAssetMenu(fileName = "LevelEditor", menuName = "Level Editor", order = 1)]
 public class LevelEditor : ScriptableObject 
 {
+    public GameObject environmentContainer;
     public SpawnPoints[] spawnPointsLists;
-
+    [Space(10)]
     public GameObject standartObject;
     public VectorXZ spawnPoint;
+
+    public void CreateEmptyEnvironmentContainer()
+    {
+        GameObject instanedObj = (GameObject)PrefabUtility.InstantiatePrefab(environmentContainer);
+        instanedObj.transform.position = Vector3.zero;
+        instanedObj.transform.rotation = Quaternion.identity;
+
+        Transform[] children = instanedObj.GetComponentsInChildren<Transform>();
+        foreach (var child in children)
+            if (child != instanedObj.transform) 
+                DestroyImmediate(child.gameObject);
+        //for (int i = 1; i < children.Length; i++)
+            //DestroyImmediate(children[i].gameObject);
+    }
 
     public void BuildObject(GameObject obj, VectorXZ inputPoint)
     {
@@ -35,11 +50,17 @@ public class LevelEditor : ScriptableObject
 
     public void BuildStandartObject()
     {
+        if (!GameObject.FindGameObjectWithTag("Environment"))
+            CreateEmptyEnvironmentContainer();
+
         BuildObject(standartObject, spawnPoint);
     }
 
     public void BuildObjectsByLists()
     {
+        if (!GameObject.FindGameObjectWithTag("Environment"))
+            CreateEmptyEnvironmentContainer();
+
         if (spawnPointsLists.Length > 0)
             foreach (var list in spawnPointsLists)
                 foreach (var inpPoint in list.spawnPoints)

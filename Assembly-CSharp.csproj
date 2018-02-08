@@ -56,11 +56,18 @@
      <Compile Include="Assets\Scripts\Bolts\PlayerBoltCollision.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Cubes\BlackCubeCollision.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy0Collision.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy0Fire.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyMover.cs" />
      <Compile Include="Assets\Scripts\Game Data\Damage.cs" />
      <Compile Include="Assets\Scripts\Game Data\HP.cs" />
      <Compile Include="Assets\Scripts\Game Data\SpawnPoints.cs" />
      <Compile Include="Assets\Scripts\LevelEditor.cs" />
+     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Spheres\OrangeSphereCollision.cs" />
+     <Compile Include="Assets\Scripts\Spheres\PurpleSphereCollision.cs" />
+     <Compile Include="Assets\Useful Resources\DestructorAtStart.cs" />
      <Compile Include="Assets\Useful Resources\ObjectsDestructionDataClass.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

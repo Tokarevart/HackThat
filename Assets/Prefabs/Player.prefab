@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 33980994468850410}
   - component: {fileID: 23010072984586550}
   m_Layer: 0
-  m_Name: PlayerModel_Right
-  m_TagString: Untagged
+  m_Name: PlayerModel_Left
+  m_TagString: 2ndToDestroyPlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,9 @@ GameObject:
   - component: {fileID: 4666775800017822}
   - component: {fileID: 54651765495056278}
   - component: {fileID: 136890296571599628}
+  - component: {fileID: 136564167398342558}
   - component: {fileID: 114006781511487814}
+  - component: {fileID: 114104518814314150}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,8 +91,8 @@ GameObject:
   - component: {fileID: 33580324953099822}
   - component: {fileID: 23752356014049980}
   m_Layer: 0
-  m_Name: PlayerModel_Left
-  m_TagString: Untagged
+  m_Name: PlayerModel_Right
+  m_TagString: 1stToDestroyPlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749977755176120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: -5}
   m_LocalScale: {x: 75, y: 17, z: 75}
   m_Children:
   - {fileID: 4682507502482358}
@@ -477,8 +479,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 18
-  fireRate: 12
+  fireRate: 11
   bolt: {fileID: 1333758324466802, guid: 60e02d3acedaba24baa3ebf8717c2fe2, type: 2}
+--- !u!114 &114104518814314150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749977755176120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29c81697f1af2c4db8ddf2fcad89539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: {fileID: 11400000, guid: 4e4192feda4130540b3e05e3fab71496, type: 2}
+  redCubeDamage: {fileID: 11400000, guid: 7c394cf9863e132429535c8891492c0c, type: 2}
+  orangeSphereDamage: {fileID: 11400000, guid: f2476c6a0c8cd844b830fc97a8f01038, type: 2}
+  purpleSphereDamage: {fileID: 11400000, guid: 066735d03e14bf84e88aa1d33e0d5dee, type: 2}
+  takeDamageDeltaTime: 0.7
+--- !u!136 &136564167398342558
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749977755176120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.011
+  m_Height: 0.036
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.0075}
 --- !u!136 &136890296571599628
 CapsuleCollider:
   m_ObjectHideFlags: 1

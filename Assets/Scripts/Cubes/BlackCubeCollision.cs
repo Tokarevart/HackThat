@@ -22,9 +22,7 @@ public class BlackCubeCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PlayerBolt")
-        {
             TakeDamage(playerBoltDamage.Value);
-        }
     }
 
     void TakeDamage(int damageValue)

@@ -15,11 +15,12 @@ public class BoltMover : MonoBehaviour
         startPosition = transform.position;
 
         movement = TAUnityLib.RotateVector3(Vector3.forward, transform.rotation);
-        GetComponent<Rigidbody>().velocity = movement * speed;
     }
 	
 	void FixedUpdate() 
     {
+        transform.position += movement * speed * Time.fixedDeltaTime;
+
         if ((transform.position - startPosition).magnitude > flyDistance)
             Destroy(gameObject);
 	}

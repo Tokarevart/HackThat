@@ -6,7 +6,8 @@ public class PlayerBoltCollision : MonoBehaviour
 {	
 	void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Player" && other.gameObject.tag != "PlayerBolt")
+        if (other.gameObject.tag != "Player" && 
+            other.gameObject.tag != "PlayerBolt")
             Destroy(gameObject);
 	}
 }

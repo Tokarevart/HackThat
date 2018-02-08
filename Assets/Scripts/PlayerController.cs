@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource shotSound;
     private int floorMask;
     private float camRayLength = 200f;
-    private float fireDTime;
+    private float fireDeltaTime;
     private float nextFireTime = 0f;
 
     void Awake()
@@ -19,16 +19,18 @@ public class PlayerController : MonoBehaviour
         floorMask = LayerMask.GetMask("Floor");
         playerRb = GetComponent<Rigidbody>();
         shotSound = GameObject.FindGameObjectWithTag("ShotSound").GetComponent<AudioSource>();
-        fireDTime = 1f / fireRate;
+        fireDeltaTime = 1f / fireRate;
     }
 
     void Update()
     {
-        if (Time.time > nextFireTime && Input.GetKey(KeyCode.Mouse0))
+        if (Time.time < nextFireTime)
+            return;
+
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             Fire();
-
-            nextFireTime = Time.time + fireDTime;
+            nextFireTime = Time.time + fireDeltaTime;
         }
     }
 
@@ -69,9 +71,6 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
-        //Quaternion quat = Camera.main.transform.rotation * new Quaternion(0f, 0f, 1.5f, 0f) * Quaternion.Inverse(Camera.main.transform.rotation);
-        //Vector3 playerToBoltStartPos = new Vector3(quat.x, 0.7f, quat.z);
-
         Instantiate(bolt, transform.position, transform.rotation);
         shotSound.Play();
     }
