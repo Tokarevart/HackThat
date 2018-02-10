@@ -14,10 +14,11 @@ TagManager:
   - PlayerTakeDamageSound
   - 1stToDestroyPlayerPart
   - 2ndToDestroyPlayerPart
-  - Enemy0
   - PurpleSphere
   - OrangeSphere
   - ForTakeDamageAnimation
+  - SimpleCylinderEnemy
+  - SharpCubeEnemy
   layers:
   - Default
   - TransparentFX
@@ -52,9 +53,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Layer0
-    uniqueID: 3268885003
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

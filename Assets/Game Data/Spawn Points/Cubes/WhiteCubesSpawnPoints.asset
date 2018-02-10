@@ -13,10 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 1781002876255316, guid: 3cdb8683bff22b948b640fce264e0820,
     type: 2}
-  spawnPoints:
-  - x: -1
-    z: 2
-  - x: 0
-    z: 2
-  - x: 1
-    z: 2
+  spawnPoints: []

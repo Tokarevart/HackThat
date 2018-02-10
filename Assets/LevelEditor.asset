@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a68cb6a7c80e14428074f15315585bf, type: 2}
   - {fileID: 11400000, guid: 245b8974ba68a7745bd9fd8cbe23d8ae, type: 2}
   - {fileID: 11400000, guid: cf68e5e7531793d45870d41e64fcd4f4, type: 2}
+  - {fileID: 11400000, guid: 21a2bba8bf4562d44b6c7bd7d11b3ffe, type: 2}
   standartObject: {fileID: 0}
   spawnPoint:
     x: 0

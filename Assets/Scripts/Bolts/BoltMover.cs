@@ -9,19 +9,22 @@ public class BoltMover : MonoBehaviour
 
     private Vector3 startPosition;
     private Vector3 movement;
+    private Transform trans;
 
     void Start()
     {
-        startPosition = transform.position;
+        trans = GetComponent<Transform>();
 
-        movement = TAUnityLib.RotateVector3(Vector3.forward, transform.rotation);
+        startPosition = trans.position;
+
+        movement = TAUnityLib.RotateVector3(Vector3.forward, trans.rotation);
     }
 	
 	void FixedUpdate() 
     {
-        transform.position += movement * speed * Time.fixedDeltaTime;
+        trans.position += movement * speed * Time.fixedDeltaTime;
 
-        if ((transform.position - startPosition).magnitude > flyDistance)
+        if ((trans.position - startPosition).magnitude > flyDistance)
             Destroy(gameObject);
 	}
 }

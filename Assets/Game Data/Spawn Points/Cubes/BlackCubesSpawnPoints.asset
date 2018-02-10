@@ -14,17 +14,11 @@ MonoBehaviour:
   spawnObject: {fileID: 1486768335932740, guid: 569a58fe6bae8444eb4a2c926079568c,
     type: 2}
   spawnPoints:
-  - x: 0
-    z: 0
+  - x: -3
+    z: -4
   - x: -1
-    z: 1
-  - x: 0
-    z: 1
+    z: -4
   - x: 1
-    z: 1
-  - x: -1
-    z: 3
-  - x: 0
-    z: 3
-  - x: 1
-    z: 3
+    z: -4
+  - x: 3
+    z: -4

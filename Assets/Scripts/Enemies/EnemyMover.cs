@@ -11,6 +11,7 @@ public class EnemyMover : MonoBehaviour
     private float radRotationSpeed;
     private Rigidbody enemyRb;
     private Transform playerTransform;
+    private Transform enemyTransform;
     private Vector3 enemyToPlayer;
     private Vector3 bufVel = new Vector3(1, 1, 1);
 
@@ -18,10 +19,11 @@ public class EnemyMover : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyRb = GetComponent<Rigidbody>();
+        enemyTransform = GetComponent<Transform>();
 
         radRotationSpeed = rotationSpeed * Mathf.PI / 180f;
 
-        enemyToPlayer = playerTransform.position - transform.position;
+        enemyToPlayer = playerTransform.position - enemyTransform.position;
         enemyToPlayer.y = 0f;
         enemyToPlayer.Normalize();
         enemyRb.velocity = enemyToPlayer * moveSpeed;
@@ -31,7 +33,7 @@ public class EnemyMover : MonoBehaviour
 	
 	void FixedUpdate() 
     {
-        enemyToPlayer = playerTransform.position - transform.position;
+        enemyToPlayer = playerTransform.position - enemyTransform.position;
         enemyToPlayer.y = 0f;
         enemyToPlayer.Normalize();
 
